@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>FinWise AI</title>
+
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+   
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+
+
+<aside class="sidebar">
+
+    <div class="logo">
+
+        <i class="fa-solid fa-chart-line"></i>
+
+        <div>
+
+            <h2>FinWise AI</h2>
+
+            <p>Smart Financial Advisor</p>
+
+        </div>
+
+    </div>
+
+    <ul class="menu">
+
+        <li class="active"
+            onclick="showPage('dashboard',this)">
+
+            <i class="fa-solid fa-house"></i>
+
+            <span>Dashboard</span>
+
+        </li>
+
+        <li
+            onclick="showPage('loan',this)">
+
+            <i class="fa-solid fa-scale-balanced"></i>
+
+            <span>Loan Eligibility</span>
+
+        </li>
+
+        <li
+            onclick="showPage('credit',this)">
+
+            <i class="fa-solid fa-chart-column"></i>
+
+            <span>Credit Analyzer</span>
+
+        </li>
+
+        <li
+            onclick="showPage('emi',this)">
+
+            <i class="fa-solid fa-calculator"></i>
+
+            <span>EMI Calculator</span>
+
+        </li>
+
+        <li
+            onclick="showPage('tips',this)">
+
+            <i class="fa-solid fa-robot"></i>
+
+            <span>AI Financial Tips</span>
+
+        </li>
+
+    </ul>
+
+</aside>
+
+
+<main class="main">
+
+
+
+<header class="topbar">
+
+    <h2>
+
+        FinWise AI Dashboard
+
+    </h2>
+
+    <div class="user">
+
+        <i class="fa-solid fa-circle-user"></i>
+
+        Guest
+
+    </div>
+
+</header>
+
+
+<section
+id="dashboard"
+class="page active">
+
+<h1>
+
+Welcome to FinWise AI 👋
+
+</h1>
+
+<p>
+
+Your intelligent platform for
+Loan Eligibility,
+Credit Analysis,
+EMI Calculation,
+and AI Financial Guidance.
+
+</p>
+
+<div class="card-grid">
+
+<div class="feature-card"
+
+onclick="showPage('loan',document.querySelectorAll('.menu li')[1])">
+
+<i class="fa-solid fa-money-check-dollar"></i>
+
+<h3>
+
+Loan Eligibility
+
+</h3>
+
+<p>
+
+Check whether you qualify for a loan.
+
+</p>
+
+</div>
+
+<div class="feature-card"
+
+onclick="showPage('credit',document.querySelectorAll('.menu li')[2])">
+
+<i class="fa-solid fa-chart-line"></i>
+
+<h3>
+
+Credit Analyzer
+
+</h3>
+
+<p>
+
+Analyze your credit score instantly.
+
+</p>
+
+</div>
+
+<div class="feature-card"
+
+onclick="showPage('emi',document.querySelectorAll('.menu li')[3])">
+
+<i class="fa-solid fa-calculator"></i>
+
+<h3>
+
+EMI Calculator
+
+</h3>
+
+<p>
+
+Calculate monthly EMI easily.
+
+</p>
+
+</div>
+
+<div class="feature-card"
+
+onclick="showPage('tips',document.querySelectorAll('.menu li')[4])">
+
+<i class="fa-solid fa-robot"></i>
+
+<h3>
+
+AI Financial Tips
+
+</h3>
+
+<p>
+
+Receive AI-powered financial advice.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section id="loan" class="page">
+
+<h2>Loan Eligibility Checker</h2>
+
+<div class="module">
+
+<div class="form-box">
+
+<input
+type="text"
+id="name"
+placeholder="Applicant Name">
+
+<input
+type="number"
+id="salary"
+placeholder="Monthly Salary">
+
+<input
+type="number"
+id="score"
+placeholder="Credit Score">
+
+<input
+type="number"
+id="existingEmi"
+placeholder="Existing EMI">
+
+<input
+type="number"
+id="age"
+placeholder="Age">
+
+<button
+id="checkLoan"
+class="btn">
+
+Check Eligibility
+
+</button>
+
+</div>
+
+<div
+id="loanResult"
+class="result-box">
+
+<h3>Loan Report</h3>
+
+<p>
+
+Enter your details and click
+<b>Check Eligibility</b>.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="credit" class="page">
+
+<h2>Credit Score Analyzer</h2>
+
+<div class="module">
+
+<div class="form-box">
+
+<input
+type="number"
+id="creditScore"
+placeholder="Enter Credit Score">
+
+<button
+id="analyzeCredit"
+class="btn">
+
+Analyze Score
+
+</button>
+
+</div>
+
+<div
+id="creditResult"
+class="result-box">
+
+<h3>Credit Analysis</h3>
+
+<p>
+
+Your analysis will appear here.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section id="emi" class="page">
+
+<h2>EMI Calculator</h2>
+
+<div class="module">
+
+<div class="form-box">
+
+<input
+type="number"
+id="loanAmount"
+placeholder="Loan Amount">
+
+<input
+type="number"
+id="interest"
+placeholder="Interest Rate (%)">
+
+<input
+type="number"
+id="months"
+placeholder="Loan Tenure (Months)">
+
+<button
+id="calculateEMI"
+class="btn">
+
+Calculate EMI
+
+</button>
+
+</div>
+
+<div
+id="emiResult"
+class="result-box">
+
+<h3>EMI Details</h3>
+
+<p>
+
+Your EMI calculation will appear here.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section id="tips" class="page">
+
+<h2>AI Financial Tips</h2>
+
+<div class="module">
+
+<div class="form-box">
+
+<textarea
+id="question"
+placeholder="Ask your finance question..."></textarea>
+
+<button
+id="askAI"
+class="btn">
+
+Ask AI
+
+</button>
+
+</div>
+
+<div
+id="aiResult"
+class="result-box">
+
+<h3>AI Response</h3>
+
+<p>
+
+ AI response will appear here.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
